@@ -32,15 +32,15 @@ const CTA = () => {
             {/* Trust indicators */}
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12 text-white font-content mb-12">
               <div className="flex items-center">
-                <div className="w-2 h-2 bg-[#0033CC] rounded-full mr-2"></div>
+                <div className="w-2 h-2 bg-[#2a6dd1] rounded-full mr-2"></div>
                 Money-Back Guarantee
               </div>
               <div className="flex items-center">
-                <div className="w-2 h-2 bg-[#0033CC] rounded-full mr-2"></div>
+                <div className="w-2 h-2 bg-[#2a6dd1] rounded-full mr-2"></div>
                 100% confidentiality guaranteed
               </div>
               <div className="flex items-center">
-                <div className="w-2 h-2 bg-[#0033CC] rounded-full mr-2"></div>
+                <div className="w-2 h-2 bg-[#2a6dd1] rounded-full mr-2"></div>
                 Free consultation & proposal
               </div>
             </div>

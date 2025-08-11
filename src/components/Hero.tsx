@@ -6,6 +6,13 @@ const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const fullText = "Transform Your Business with AI That Actually Works";
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     if (currentIndex < fullText.length) {
       const timeout = setTimeout(() => {
@@ -74,8 +81,11 @@ const Hero = () => {
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#0033CC] to-[#8F94FF] opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
           </a>
 
-          <button className="group px-8 py-4 border-2 border-[#8F94FF]/40 rounded-full font-semibold text-[#8F94FF] transition-all duration-300 hover:border-[#8F94FF]/60 hover:shadow-[0_0_20px_rgba(143,148,255,0.25)] flex items-center font-content">
-            View Our Work
+          <button
+            onClick={() => scrollToSection("services-section")}
+            className="group px-8 py-4 border-2 border-[#8F94FF]/40 rounded-full font-semibold text-[#8F94FF] transition-all duration-300 hover:border-[#8F94FF]/60 hover:shadow-[0_0_20px_rgba(143,148,255,0.25)] flex items-center font-content"
+          >
+            View Our Services
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
           </button>
         </div>

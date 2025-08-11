@@ -2,10 +2,14 @@ import React from "react";
 
 const BookingSection = () => {
   return (
-    <section className="py-24 px-6 relative bg-gradient-to-b from-[#0a0a0b] to-[#1a1a2e]"   style={{
-      background:
-        "radial-gradient(circle at center, #0033CC 25%, #001a66 20%, #000000 60%, #000000 100%)",
-    }}>
+    <section
+      id="booking-section"
+      className="py-24 px-6 relative bg-gradient-to-b from-[#0a0a0b] to-[#1a1a2e]"
+      style={{
+        background:
+          "radial-gradient(circle at center, #0033CC 25%, #001a66 20%, #000000 60%, #000000 100%)",
+      }}
+    >
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 font-title">

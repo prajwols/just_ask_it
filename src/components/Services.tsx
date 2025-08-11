@@ -2,6 +2,12 @@ import React from "react";
 import { Phone, Send, Bot, Headphones, Cpu } from "lucide-react";
 
 const Services = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const services = [
     {
       icon: Bot,
@@ -24,7 +30,7 @@ const Services = () => {
       visual: "voice-visual",
       image:
         "https://images.unsplash.com/photo-1601856254555-a9c0ebef8af3?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        // https://images.unsplash.com/photo-1627634777217-c864268db30c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+      // https://images.unsplash.com/photo-1627634777217-c864268db30c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
     },
     {
       icon: Cpu,
@@ -41,6 +47,7 @@ const Services = () => {
 
   return (
     <section
+      id="services-section"
       className="py-24 px-6 relative"
       style={{
         background:
@@ -97,7 +104,10 @@ const Services = () => {
                 </p>
 
                 {/* CTA */}
-                <button className="text-white font-medium flex items-center group/link hover:text-[#8F94FF] transition-colors duration-300 font-content border-b border-white/30 hover:border-[#8F94FF]/50 pb-1 text-sm">
+                <button
+                  onClick={() => scrollToSection("booking-section")}
+                  className="text-white font-medium flex items-center group/link hover:text-[#8F94FF] transition-colors duration-300 font-content border-b border-white/30 hover:border-[#8F94FF]/50 pb-1 text-sm"
+                >
                   {service.cta}
                   <service.ctaIcon className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" />
                 </button>
@@ -139,7 +149,10 @@ const Services = () => {
             </p>
 
             {/* CTA */}
-            <button className="text-white font-medium flex items-center group/link hover:text-[#8F94FF] transition-colors duration-300 font-content border-b border-white/30 hover:border-[#8F94FF]/50 pb-1">
+            <button
+              onClick={() => scrollToSection("booking-section")}
+              className="text-white font-medium flex items-center group/link hover:text-[#8F94FF] transition-colors duration-300 font-content border-b border-white/30 hover:border-[#8F94FF]/50 pb-1"
+            >
               1:1 Consultation
               <Phone className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" />
             </button>

@@ -9,6 +9,13 @@ const VideoSection = () => {
   const [duration, setDuration] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handlePlayPause = () => {
     if (videoRef.current) {
       if (isPlaying) {
@@ -243,7 +250,10 @@ const VideoSection = () => {
           <p className="text-lg text-white mb-6 font-content">
             Ready to see how we can transform your business?
           </p>
-          <button className="bg-gradient-to-r from-[#0033CC] to-[#8F94FF] text-white px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-transform duration-300 font-content">
+          <button
+            onClick={() => scrollToSection("booking-section")}
+            className="bg-gradient-to-r from-[#0033CC] to-[#8F94FF] text-white px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-transform duration-300 font-content"
+          >
             Schedule a Demo
           </button>
         </div>
