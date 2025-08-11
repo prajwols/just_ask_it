@@ -1,3 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  /* Dark Theme with Subtle Blue Accents */
+  --gradient-primary: linear-gradient(
+    to right top,
+    #000000,
+    #0a0a0a,
+    #001a66,
+    #0033cc
+  );
+
+  --gradient-secondary: linear-gradient(
+    to right top,
+    #000000,
+    #001a66,
+    #0033cc,
+    #0a0a0a
+  );
+
+  --gradient-tertiary: linear-gradient(
+    to right top,
+    #001a66,
+    #0033cc,
+    #000000,
+    #0a0a0a
+  );
+
+  --gradient-accent: linear-gradient(
+    to right top,
+    #0033cc 0%,
+    #001a66 50%,
+    #000000 100%
+  );
+
+  --gradient-card: linear-gradient(
+    to right top,
+    rgba(0, 51, 204, 0.08),
+    rgba(0, 26, 102, 0.03),
+    rgba(0, 0, 0, 0.1)
+  );
+
+  --gradient-button: linear-gradient(to right top, #001a66 0%, #0033cc 100%);
+
+  --gradient-text: linear-gradient(
+    to right top,
+    #ffffff 0%,
+    #0033cc 50%,
+    #001a66 100%
+  );
+
+  /* Individual Colors */
+  --color-primary: #0033cc;
+  --color-secondary: #001a66;
+  --color-tertiary: #000000;
+  --color-accent: #0033cc;
+  --color-blue-light: #0033cc;
+  --color-blue-medium: #001a66;
+  --color-blue-dark: #000000;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #94a3b8;
+  --color-text-accent: #0033cc;
+  --color-accent-purple: #8f94ff;
+}
+
+/* Global gradient background */
+body {
+  background: var(--gradient-primary);
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+/* Font utility classes */
+.font-title {
+  font-family: "Manrope", sans-serif;
+}
+
+.font-content {
+  font-family: "Inter", sans-serif;
+}
+
+/* Color utility classes */
+.text-accent-purple {
+  color: #8f94ff;
+}
+
+.text-white-primary {
+  color: #ffffff;
+}
+
+/* Modernistic gradient text utility */
+.modern-gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Modernistic gradient card utility */
+.modern-gradient-card {
+  background: var(--gradient-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(102, 178, 255, 0.1);
+}
+
+/* Modernistic gradient button utility */
+.modern-gradient-button {
+  background: var(--gradient-button);
+  transition: all 0.3s ease;
+}
+
+.modern-gradient-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 178, 255, 0.3);
+}
+
+/* Section modernistic gradients - Variant 1 */
+.section-modern-gradient {
+  background: var(--gradient-primary);
+  position: relative;
+}
+
+.section-modern-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right top,
+    rgba(102, 178, 255, 0.05) 0%,
+    transparent 50%,
+    rgba(0, 51, 204, 0.05) 100%
+  );
+  pointer-events: none;
+}
+
+/* Section modernistic gradients - Variant 2 */
+.section-modern-gradient-alt {
+  background: var(--gradient-secondary);
+  position: relative;
+}
+
+.section-modern-gradient-alt::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right top,
+    rgba(1, 1, 10, 0.05) 0%,
+    transparent 50%,
+    rgba(102, 178, 255, 0.05) 100%
+  );
+  pointer-events: none;
+}
+
+/* Section modernistic gradients - Variant 3 */
+.section-modern-gradient-alt2 {
+  background: var(--gradient-tertiary);
+  position: relative;
+}
+
+.section-modern-gradient-alt2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right top,
+    rgba(102, 178, 255, 0.05) 0%,
+    transparent 50%,
+    rgba(1, 1, 10, 0.05) 100%
+  );
+  pointer-events: none;
+}
+
+/* Animated modernistic gradient background */
+.animated-modern-gradient {
+  background: var(--gradient-primary);
+  background-size: 200% 200%;
+  animation: modernGradientShift 20s ease infinite;
+}
+
+@keyframes modernGradientShift {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Modernistic gradient overlay for sections */
+.modern-overlay {
+  background: linear-gradient(
+    to right top,
+    rgba(102, 178, 255, 0.1),
+    rgba(0, 51, 204, 0.05),
+    rgba(1, 1, 10, 0.1)
+  );
+}

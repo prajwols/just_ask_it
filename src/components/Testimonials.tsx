@@ -1,171 +1,164 @@
-import React, { useState, useEffect } from 'react';
-import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import React from "react";
 
 const Testimonials = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const testimonials = [
     {
-      name: 'Sarah Chen',
-      role: 'CTO',
-      company: 'TechCorp Industries',
-      content: "The AI solution delivered by this team exceeded all our expectations. We've seen a 300% increase in efficiency and our customers are happier than ever. The implementation was seamless and the support has been outstanding.",
-      rating: 5,
-      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400'
+      name: "Nikita Kutsokon",
+      position: "AI automation lead",
+      company: "Nobel Navigators",
+      avatar:
+        "https://res.cloudinary.com/dizpfirmr/image/upload/v1754818111/nikita_wyoekl.jpg",
+      messages: [
+        { text: "Looks awesome 🔥", type: "client" },
+        {
+          text: "We've definitely seen a significant increase in leads and growth!",
+          type: "client",
+        },
+        {
+          text: "Thrilled to hear you're happy with the results!",
+          type: "company",
+        },
+      ],
     },
     {
-      name: 'Michael Rodriguez',
-      role: 'VP of Operations',
-      company: 'Global Logistics Co',
-      content: "Working with this AI team transformed our entire supply chain. The predictive analytics have saved us millions in operational costs, and the ROI was evident within the first quarter of implementation.",
-      rating: 5,
-      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400'
+      name: "Ananda Chaudary",
+      position: "Founder",
+      company: "Anovox Labs",
+      avatar:
+        "https://res.cloudinary.com/dizpfirmr/image/upload/v1754815177/ananada_eknxca.jpg",
+      messages: [
+        { text: "The AI solution is incredible! ", type: "client" },
+        { text: "Our efficiency has improved by 300%", type: "client" },
+        {
+          text: "That's amazing! We're so glad it's working well for you 💙.",
+          type: "company",
+        },
+      ],
     },
     {
-      name: 'Dr. Emma Thompson',
-      role: 'Chief Medical Officer',
-      company: 'HealthTech Solutions',
-      content: "The diagnostic AI system has revolutionized our patient care. We're now able to detect conditions 40% faster with 95% accuracy. This technology is literally saving lives every day in our hospitals.",
-      rating: 5,
-      image: 'https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=400'
+      name: "Prabesh Dahal",
+      position: "CEO",
+      company: "Krip Artificial Intelligence",
+      avatar:
+        "https://res.cloudinary.com/dizpfirmr/image/upload/v1754817810/prabesh_qlm1mr.jpg",
+      messages: [
+        { text: "This has revolutionized our patient care ", type: "client" },
+        { text: "We're detecting conditions 40% faster now", type: "client" },
+        {
+          text: "That's exactly what we hoped for! Saving lives is what matters most.",
+          type: "company",
+        },
+      ],
     },
     {
-      name: 'James Park',
-      role: 'Head of Innovation',
-      company: 'FinanceFirst Bank',
-      content: "The fraud detection system has been a game-changer for our security. We've reduced false positives by 60% while catching 99% of actual fraud attempts. The customer experience has improved dramatically.",
-      rating: 5,
-      image: 'https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=400'
-    }
+      name: "Emma",
+      position: "Founder & CEO",
+      company: "Turing Research and Development",
+      avatar:
+        "https://res.cloudinary.com/dizpfirmr/image/upload/v1754815779/avatar1_limdxc.avif",
+      messages: [
+        {
+          text: "The AI chatbot and voice agent are game-changers! ",
+          type: "client",
+        },
+        {
+          text: "Customer satisfaction increased by 85% and response time dropped to seconds",
+          type: "client",
+        },
+        {
+          text: "Excellent results! AI-powered customer service is the future.",
+          type: "company",
+        },
+      ],
+    },
   ];
 
-  useEffect(() => {
-    if (isAutoPlaying) {
-      const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % testimonials.length);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [isAutoPlaying, testimonials.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
   return (
-    <section className="py-24 px-6 relative bg-gradient-to-b from-[#1a1a2e] to-[#0a0a0b]">
+    <section className="py-24 px-6 relative bg-gradient-to-b from-[#0033CC] to-[#001a66]"  style={{
+      background:
+        "radial-gradient(circle at center, #000000 0%, #001a66 30%, #000000 60%, #0033CC 100%)",
+    }}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-white to-[#a1a1aa] bg-clip-text text-transparent">
-              What Our Clients Say
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 font-title">
+            <span className="text-white">Real Client Conversations</span>
           </h2>
-          <p className="text-xl text-[#a1a1aa] max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what industry leaders have to say 
-            about their experience working with our AI solutions.
+          <p className="text-xl text-white max-w-3xl mx-auto font-content">
+            See what our clients are saying in real-time. These are actual
+            conversations from our satisfied customers.
           </p>
         </div>
 
-        <div 
-          className="relative"
-          onMouseEnter={() => setIsAutoPlaying(false)}
-          onMouseLeave={() => setIsAutoPlaying(true)}
-        >
-          {/* Testimonial Card */}
-          <div className="relative h-[400px] overflow-hidden rounded-2xl">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className={`absolute inset-0 transition-all duration-700 ease-in-out ${
-                  index === currentSlide 
-                    ? 'opacity-100 translate-x-0' 
-                    : index < currentSlide 
-                      ? 'opacity-0 -translate-x-full' 
-                      : 'opacity-0 translate-x-full'
-                }`}
-              >
-                <div className="bg-gradient-to-br from-[#1a1a2e]/80 to-[#0f0f23]/80 border border-[#00d4ff]/20 rounded-2xl p-8 md:p-12 h-full flex flex-col justify-center backdrop-blur-sm">
-                  <div className="flex items-center mb-6">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-[#ff6b35] fill-current" />
-                    ))}
-                  </div>
-                  
-                  <blockquote className="text-xl md:text-2xl text-white leading-relaxed mb-8 flex-grow">
-                    "{testimonial.content}"
-                  </blockquote>
-                  
-                  <div className="flex items-center">
-                    <img 
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-16 h-16 rounded-full object-cover mr-4 border-2 border-[#00d4ff]/30"
-                    />
-                    <div>
-                      <div className="text-lg font-bold text-white mb-1">
-                        {testimonial.name}
-                      </div>
-                      <div className="text-[#00d4ff] font-medium">
-                        {testimonial.role}
-                      </div>
-                      <div className="text-[#a1a1aa]">
-                        {testimonial.company}
-                      </div>
-                    </div>
-                  </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl p-4 md:p-6 flex flex-col gap-4 min-h-[400px] md:min-h-[500px] w-full shadow-lg"
+            >
+              <div className="flex items-center gap-3">
+                <img
+                  src={testimonial.avatar}
+                  alt={testimonial.name}
+                  className="w-12 h-12 md:w-16 md:h-16 rounded-full object-contain"
+                />
+                <div className="flex flex-col">
+                  <span className="font-semibold text-gray-800 text-sm md:text-base">
+                    {testimonial.name}
+                  </span>
+                  {testimonial.position && testimonial.company && (
+                    <span className="text-xs md:text-sm text-gray-500">
+                      {testimonial.position} at {testimonial.company}
+                    </span>
+                  )}
                 </div>
               </div>
-            ))}
-          </div>
 
-          {/* Navigation Buttons */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#00d4ff]/20 hover:bg-[#00d4ff]/40 border border-[#00d4ff]/40 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 backdrop-blur-sm"
-          >
-            <ChevronLeft className="w-6 h-6 text-[#00d4ff]" />
-          </button>
-          
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#00d4ff]/20 hover:bg-[#00d4ff]/40 border border-[#00d4ff]/40 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 backdrop-blur-sm"
-          >
-            <ChevronRight className="w-6 h-6 text-[#00d4ff]" />
-          </button>
-        </div>
-
-        {/* Slide Indicators */}
-        <div className="flex justify-center space-x-3 mt-8">
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide 
-                  ? 'bg-[#00d4ff] scale-125' 
-                  : 'bg-[#00d4ff]/30 hover:bg-[#00d4ff]/60'
-              }`}
-            />
+              <div className="flex-1 flex flex-col gap-3">
+                {testimonial.messages.map((message, msgIndex) => (
+                  <div key={msgIndex} className="flex flex-col">
+                    {message.type === "company" && (
+                      <div className="text-xs text-gray-500 mb-1 font-semibold self-end">
+                        Just Ask IT
+                      </div>
+                    )}
+                    <div
+                      className={`p-2 md:p-3 rounded-lg w-fit max-w-[85%] text-sm md:text-base ${
+                        message.type === "client"
+                          ? "bg-gray-100 text-gray-800 self-start rounded-br-md"
+                          : "bg-black text-white self-end rounded-bl-md"
+                      }`}
+                    >
+                      {message.text}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
 
         {/* Company Logos */}
-        <div className="mt-16 text-center">
-          <p className="text-[#a1a1aa] mb-8">Trusted by industry leaders</p>
+        {/* <div className="mt-16 text-center">
+          <p className="text-white mb-8 font-content">
+            Trusted by industry leaders
+          </p>
           <div className="flex flex-wrap justify-center items-center space-x-8 md:space-x-12 opacity-60">
-            {['TechCorp', 'Global Logistics', 'HealthTech', 'FinanceFirst', 'InnovateLab'].map((company, index) => (
-              <div key={index} className="text-[#a1a1aa] font-semibold text-lg hover:text-[#00d4ff] transition-colors duration-300 cursor-pointer">
+            {[
+              "TechCorp",
+              "Global Logistics",
+              "HealthTech",
+              "FinanceFirst",
+              "InnovateLab",
+            ].map((company, index) => (
+              <div
+                key={index}
+                className="text-white font-semibold text-lg hover:text-[#8F94FF] transition-colors duration-300 cursor-pointer font-content"
+              >
                 {company}
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

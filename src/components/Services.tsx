@@ -1,104 +1,152 @@
-import React from 'react';
-import { Brain, Database, MessageSquare, BarChart3, Shield, Zap } from 'lucide-react';
+import React from "react";
+import { Phone, Send, Bot, Headphones, Cpu } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      icon: Brain,
-      title: 'Machine Learning Models',
-      description: 'Custom ML solutions tailored to your business needs with state-of-the-art algorithms and continuous learning capabilities.',
-      color: 'from-[#00d4ff] to-[#8b5cf6]'
+      icon: Bot,
+      title: "AI Chatbots",
+      description:
+        "Boost your customer support with chatbots that answer instantly, helping clients while you work on growing your business.",
+      cta: "Get Started",
+      ctaIcon: Send,
+      visual: "chatbot-visual",
+      image:
+        "https://images.unsplash.com/photo-1627634771100-b78244ffd302?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
-      icon: MessageSquare,
-      title: 'Conversational AI',
-      description: 'Intelligent chatbots and virtual assistants that understand context and provide human-like interactions.',
-      color: 'from-[#8b5cf6] to-[#ff6b35]'
+      icon: Headphones,
+      title: "AI Voice Agent",
+      description:
+        "Let our voice agents take care of your customer calls, handling inquiries quickly and freeing up your team to focus on the big stuff.",
+      cta: "Get Started",
+      ctaIcon: Send,
+      visual: "voice-visual",
+      image:
+        "https://images.unsplash.com/photo-1601856254555-a9c0ebef8af3?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        // https://images.unsplash.com/photo-1627634777217-c864268db30c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
     },
     {
-      icon: Database,
-      title: 'Data Intelligence',
-      description: 'Transform raw data into actionable insights with advanced analytics and predictive modeling.',
-      color: 'from-[#ff6b35] to-[#00d4ff]'
+      icon: Cpu,
+      title: "Custom AI Solutions",
+      description:
+        "Tailored AI solutions built specifically for your business requirements and industry needs with state-of-the-art algorithms.",
+      cta: "Get Started",
+      ctaIcon: Send,
+      visual: "custom-visual",
+      image:
+        "https://plus.unsplash.com/premium_photo-1679517155620-8048e22078b1?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
-    {
-      icon: BarChart3,
-      title: 'Business Analytics',
-      description: 'Real-time dashboards and reporting systems that help you make data-driven decisions.',
-      color: 'from-[#00d4ff] to-[#8b5cf6]'
-    },
-    {
-      icon: Shield,
-      title: 'AI Security',
-      description: 'Robust security measures and compliance frameworks to protect your AI implementations.',
-      color: 'from-[#8b5cf6] to-[#ff6b35]'
-    },
-    {
-      icon: Zap,
-      title: 'Process Automation',
-      description: 'Streamline operations with intelligent automation that adapts and learns from your workflows.',
-      color: 'from-[#ff6b35] to-[#00d4ff]'
-    }
   ];
 
   return (
-    <section className="py-24 px-6 relative">
+    <section
+      className="py-24 px-6 relative"
+      style={{
+        background:
+          "radial-gradient(circle at center, #0033CC -120%, #001a66 15%, #000000 60%, #000000 100%)",
+      }}
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-white to-[#a1a1aa] bg-clip-text text-transparent">
-              Our AI Services
-            </span>
-          </h2>
-          <p className="text-xl text-[#a1a1aa] max-w-3xl mx-auto">
-            Comprehensive AI solutions designed to accelerate your digital transformation 
-            and unlock new possibilities for your business.
-          </p>
+        {/* Header */}
+        <div className="flex justify-between items-center mb-16">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 font-title">
+              <span className="text-white">Discover Our Services</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#8F94FF] to-[#0033CC] rounded-full"></div>
+          </div>
+          <div className="flex items-center space-x-3">
+            <div className="w-3 h-3 bg-[#8F94FF] rounded-full"></div>
+            <button className="bg-[#8F94FF]/20 text-[#8F94FF] px-4 py-2 rounded-lg font-medium hover:bg-[#8F94FF]/30 transition-colors duration-300 font-content">
+              Services
+            </button>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Service Cards - All in one row */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative p-8 rounded-2xl bg-gradient-to-br from-[#1a1a2e]/50 to-[#0f0f23]/50 border border-[#00d4ff]/10 hover:border-[#00d4ff]/30 transition-all duration-500 hover:scale-105 cursor-pointer backdrop-blur-sm"
-              style={{
-                transform: 'perspective(1000px) rotateX(0deg)',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'perspective(1000px) rotateX(5deg) rotateY(-5deg)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-              }}
+              className="group relative p-6 rounded-2xl bg-black/40 hover:bg-black/60 transition-all duration-500 hover:scale-105 cursor-pointer border border-white/10 overflow-hidden min-h-[450px]"
             >
-              {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#00d4ff]/5 to-[#8b5cf6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
+              {/* Background Image */}
+              <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0033CC]/40 to-[#8F94FF]/40"></div>
+              </div>
+
               <div className="relative z-10">
-                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${service.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                {/* Icon */}
+                <div className="inline-flex p-4 rounded-xl bg-gradient-to-r from-[#0033CC] to-[#8F94FF] mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                
-                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-[#00d4ff] transition-colors duration-300">
+
+                {/* Content */}
+                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-[#8F94FF] transition-colors duration-300 font-title">
                   {service.title}
                 </h3>
-                
-                <p className="text-[#a1a1aa] leading-relaxed mb-6">
+
+                <p className="text-white/80 leading-relaxed mb-6 font-content text-sm">
                   {service.description}
                 </p>
-                
-                <button className="text-[#00d4ff] font-medium flex items-center group/link hover:text-[#8b5cf6] transition-colors duration-300">
-                  Learn More
-                  <div className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300">
-                    →
-                  </div>
+
+                {/* CTA */}
+                <button className="text-white font-medium flex items-center group/link hover:text-[#8F94FF] transition-colors duration-300 font-content border-b border-white/30 hover:border-[#8F94FF]/50 pb-1 text-sm">
+                  {service.cta}
+                  <service.ctaIcon className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" />
                 </button>
               </div>
 
-              {/* Hover glow effect */}
-              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-[#00d4ff]/10 to-[#8b5cf6]/10 blur-xl -z-10" />
+              {/* Hover Glow Effect */}
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-[#8F94FF]/10 to-[#0033CC]/10 blur-xl -z-10"></div>
             </div>
           ))}
+        </div>
+
+        {/* Consultation Card - Full Width */}
+        <div className="group relative p-8 rounded-2xl bg-black/40 hover:bg-black/60 transition-all duration-500 hover:scale-105 cursor-pointer border border-white/10 overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500">
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="Consultation"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0033CC]/40 to-[#8F94FF]/40"></div>
+          </div>
+
+          <div className="relative z-10">
+            {/* Icon */}
+            <div className="inline-flex p-4 rounded-xl bg-gradient-to-r from-[#0033CC] to-[#8F94FF] mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <Phone className="w-8 h-8 text-white" />
+            </div>
+
+            {/* Content */}
+            <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-[#8F94FF] transition-colors duration-300 font-title">
+              30 min Consultation
+            </h3>
+
+            <p className="text-white/80 leading-relaxed mb-6 font-content">
+              Not exactly sure how AI Chatbot or AI Voice Agent or AI Solutions
+              could be integrated into your Business? Then book a 1:1
+              consultation call.
+            </p>
+
+            {/* CTA */}
+            <button className="text-white font-medium flex items-center group/link hover:text-[#8F94FF] transition-colors duration-300 font-content border-b border-white/30 hover:border-[#8F94FF]/50 pb-1">
+              1:1 Consultation
+              <Phone className="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" />
+            </button>
+          </div>
+
+          {/* Hover Glow Effect */}
+          <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-[#8F94FF]/10 to-[#0033CC]/10 blur-xl -z-10"></div>
         </div>
       </div>
     </section>
