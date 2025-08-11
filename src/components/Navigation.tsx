@@ -27,14 +27,14 @@ const Navigation = () => {
           : "none",
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 py-2">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
             <img
               src="/Just Ask IT LightBlue.svg"
               alt="Just Ask IT"
-              className="h-24 w-auto transition-all duration-300"
+              className="h-16 sm:h-20 md:h-24 w-auto transition-all duration-300"
               style={{ filter: "brightness(0) invert(1)" }}
             />
           </div>
@@ -45,10 +45,10 @@ const Navigation = () => {
               href="https://cal.com/prajwol-subedi-sztcmv/30min?overlayCalendar=true"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center px-4 py-2 rounded-full font-semibold transition-all duration-300 bg-white text-black hover:bg-gray-100 shadow-lg font-title hover:shadow-[0_0_20px_rgba(143,148,255,0.3)]"
+              className="group flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-semibold transition-all duration-300 bg-white text-black hover:bg-gray-100 shadow-lg font-title text-xs sm:text-sm hover:shadow-[0_0_20px_rgba(143,148,255,0.3)]"
             >
-              <span className="mr-2">Book Discovery Call</span>
-              <ExternalLink className="w-4 h-4 transition-all duration-300 text-black group-hover:translate-x-1 group-hover:-translate-y-1" />
+              <span className="mr-1.5 sm:mr-2">Book Discovery Call</span>
+              <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 transition-all duration-300 text-black group-hover:translate-x-1 group-hover:-translate-y-1" />
             </a>
           </div>
         </div>

@@ -30,7 +30,7 @@ const Hero = () => {
 
   return (
     <div
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 sm:pt-32 md:pt-36 lg:pt-40"
       style={{
         background:
           "linear-gradient(135deg, #000000 0%, #0a0a0a 15%, #001a66 25%, #0033cc 35%, #001a66 45%, #0a0a0a 55%, #000000 100%)",
