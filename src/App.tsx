@@ -11,7 +11,7 @@ import CTA from "./components/CTA";
 
 function App() {
   return (
-    <div className="animated-modern-gradient text-white overflow-x-hidden min-h-screen">
+    <div className="site-shell min-h-screen overflow-x-hidden text-slate-950 dark:text-white">
       <Navigation />
       <Hero />
       <VideoSection />

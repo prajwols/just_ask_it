@@ -69,10 +69,16 @@
 
 /* Global gradient background */
 body {
-  background: var(--gradient-primary);
+  background: #ffffff;
   background-attachment: fixed;
   min-height: 100vh;
   font-family: "Inter", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--gradient-primary);
+  }
 }
 
 /* Font utility classes */
@@ -190,6 +196,18 @@ body {
   background: var(--gradient-primary);
   background-size: 200% 200%;
   animation: modernGradientShift 20s ease infinite;
+}
+
+.site-shell {
+  background: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .site-shell {
+    background: var(--gradient-primary);
+    background-size: 200% 200%;
+    animation: modernGradientShift 20s ease infinite;
+  }
 }
 
 @keyframes modernGradientShift {

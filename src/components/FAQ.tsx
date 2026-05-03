@@ -57,14 +57,11 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-24 px-6 relative bg-gradient-to-b from-[#1a1a2e] to-[#0a0a0b]"     style={{
-      background:
-        "radial-gradient(circle at center, #0033CC 0%, #001a66 20%, #000000 60%, #000000 100%)",
-    }}>
+    <section className="relative bg-slate-50 px-6 py-24 dark:bg-[radial-gradient(circle_at_center,#0033CC_0%,#001a66_20%,#000000_60%,#000000_100%)]">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 font-title">
-            <span className="text-white">Frequently Asked Questions</span>
+            <span className="text-slate-950 dark:text-white">Frequently Asked Questions</span>
           </h2>
         </div>
 
@@ -77,22 +74,22 @@ const FAQ = () => {
               <div
                 className={`${
                   index === 0
-                    ? "border-t border-b border-[#8F94FF]/20"
-                    : "border-b border-[#8F94FF]/20"
+                    ? "border-t border-b border-slate-200 dark:border-[#8F94FF]/20"
+                    : "border-b border-slate-200 dark:border-[#8F94FF]/20"
                 }`}
               >
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between transition-all duration-300"
                 >
-                  <span className="text-white font-medium font-manrope text-xl pr-4">
+                  <span className="text-slate-950 font-medium font-manrope text-xl pr-4 dark:text-white">
                     {faq.question}
                   </span>
                   <div className="flex-shrink-0">
                     {openIndex === index ? (
-                      <ChevronDown className="w-5 h-5 text-[#8F94FF] transform rotate-180 transition-transform duration-300" />
+                      <ChevronDown className="w-5 h-5 text-[#0033CC] transform rotate-180 transition-transform duration-300 dark:text-[#8F94FF]" />
                     ) : (
-                      <Plus className="w-5 h-5 text-[#8F94FF] transition-transform duration-300" />
+                      <Plus className="w-5 h-5 text-[#0033CC] transition-transform duration-300 dark:text-[#8F94FF]" />
                     )}
                   </div>
                 </button>
@@ -105,7 +102,7 @@ const FAQ = () => {
                   }`}
                 >
                   <div className="px-6 pt-4 pb-4">
-                    <p className="text-[#a7aeb3d5] font-manrope leading-relaxed font-content">
+                    <p className="text-slate-600 font-manrope leading-relaxed font-content dark:text-[#a7aeb3d5]">
                       {faq.answer}
                     </p>
                   </div>

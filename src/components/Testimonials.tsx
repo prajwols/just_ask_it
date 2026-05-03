@@ -74,16 +74,13 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 px-6 relative bg-gradient-to-b from-[#0033CC] to-[#001a66]"  style={{
-      background:
-        "radial-gradient(circle at center, #000000 0%, #001a66 30%, #000000 60%, #0033CC 100%)",
-    }}>
+    <section className="relative bg-slate-50 px-6 py-24 dark:bg-[radial-gradient(circle_at_center,#000000_0%,#001a66_30%,#000000_60%,#0033CC_100%)]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 font-title">
-            <span className="text-white">Real Client Conversations</span>
+            <span className="text-slate-950 dark:text-white">Real Client Conversations</span>
           </h2>
-          <p className="text-xl text-white max-w-3xl mx-auto font-content">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto font-content dark:text-white">
             See what our clients are saying in real-time. These are actual
             conversations from our satisfied customers.
           </p>
@@ -93,7 +90,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-4 md:p-6 flex flex-col gap-4 min-h-[400px] md:min-h-[500px] w-full shadow-lg"
+              className="bg-white rounded-xl p-4 md:p-6 flex flex-col gap-4 min-h-[400px] md:min-h-[500px] w-full shadow-lg border border-slate-200"
             >
               <div className="flex items-center gap-3">
                 <img
