@@ -69,8 +69,10 @@
 
 /* Global gradient background */
 body {
-  background: #ffffff;
+  background: var(--gradient-primary);
   background-attachment: fixed;
+  background-size: 200% 200%;
+  animation: modernGradientShift 20s ease infinite;
   min-height: 100vh;
   font-family: "Inter", sans-serif;
 }
@@ -199,7 +201,7 @@ body {
 }
 
 .site-shell {
-  background: #ffffff;
+  background: transparent;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -97,15 +97,19 @@ const VideoSection = () => {
 
   return (
     <section
-      className="relative bg-white px-6 py-24 dark:bg-[radial-gradient(circle_at_center,#0033CC_0%,#001a66_20%,#000000_60%,#000000_100%)]"
+      className="py-24 px-6 relative"
+      style={{
+        background:
+          "radial-gradient(circle at center, #0033CC 0%, #001a66 20%, #000000 60%, #000000 100%)",
+      }}
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 font-title">
-            <span className="text-slate-950 dark:text-white">See Our Solutions in Action</span>
+            <span className="text-white">See Our AI Solutions in Action</span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto font-content dark:text-white">
-            Watch how we transform businesses with cutting-edge digital technology.
+          <p className="text-xl text-white max-w-3xl mx-auto font-content">
+            Watch how we transform businesses with cutting-edge AI technology.
             See real examples of our work and understand the impact we can have
             on your organization.
           </p>
@@ -121,7 +125,7 @@ const VideoSection = () => {
               onClick={handleVideoClick}
             >
               {/* Video Container with proper aspect ratio */}
-              <div className="aspect-video bg-gradient-to-br from-slate-100 to-slate-200 relative dark:from-[#0033CC] dark:to-[#001a66]">
+              <div className="aspect-video bg-gradient-to-br from-[#0033CC] to-[#001a66] relative">
                 {/* Video Element */}
                 <video
                   ref={videoRef}
@@ -223,17 +227,17 @@ const VideoSection = () => {
 
             {/* Trust Indicators */}
             <div className="mt-12 text-center">
-              <div className="flex flex-wrap justify-center items-center gap-8 text-slate-600 font-content dark:text-white/80">
+              <div className="flex flex-wrap justify-center items-center gap-8 text-white/80 font-content">
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-[#0033CC] rounded-full dark:bg-[#8F94FF]"></div>
+                  <div className="w-2 h-2 bg-[#8F94FF] rounded-full"></div>
                   <span>HD Quality</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-[#0033CC] rounded-full dark:bg-[#8F94FF]"></div>
+                  <div className="w-2 h-2 bg-[#8F94FF] rounded-full"></div>
                   <span>Real Examples</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-[#0033CC] rounded-full dark:bg-[#8F94FF]"></div>
+                  <div className="w-2 h-2 bg-[#8F94FF] rounded-full"></div>
                   <span>{formatTime(duration)} watch</span>
                 </div>
               </div>
@@ -243,12 +247,12 @@ const VideoSection = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <p className="text-lg text-slate-600 mb-6 font-content dark:text-white">
+          <p className="text-lg text-white mb-6 font-content">
             Ready to see how we can transform your business?
           </p>
           <button
             onClick={() => scrollToSection("booking-section")}
-            className="bg-slate-950 text-white px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-transform duration-300 font-content dark:bg-gradient-to-r dark:from-[#0033CC] dark:to-[#8F94FF]"
+            className="bg-gradient-to-r from-[#0033CC] to-[#8F94FF] text-white px-8 py-4 rounded-xl font-semibold hover:scale-105 transition-transform duration-300 font-content"
           >
             Schedule a Demo
           </button>
