@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- JA Monogram -->
+  <path d="M150 300 Q200 350 250 250 L300 150" 
+        stroke="url(#grad)" stroke-width="20" fill="none" stroke-linecap="round"/>
+
+  <path d="M260 250 L330 350 L380 350" 
+        stroke="url(#grad)" stroke-width="20" fill="none" stroke-linecap="round"/>
+
+  <!-- Question mark -->
+  <path d="M320 120 Q360 80 400 120 Q420 140 400 170 Q380 200 360 210" 
+        stroke="url(#grad)" stroke-width="15" fill="none" stroke-linecap="round"/>
+  <circle cx="360" cy="240" r="8" fill="#8b5cf6"/>
+
+  <!-- Text -->
+  <text x="250" y="430" font-family="Arial, sans-serif" font-size="40" text-anchor="middle" fill="#555">
+    Just Ask Us
+  </text>
+</svg>

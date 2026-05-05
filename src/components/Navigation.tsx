@@ -30,12 +30,13 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center isolate">
             <img
-              src="/Just Ask IT LightBlue.svg"
+              src="/main.png"
               alt="Just Ask IT"
-              className="h-16 sm:h-20 md:h-24 w-auto transition-all duration-300"
-              style={{ filter: "brightness(0) invert(1)" }}
+              className="h-12 sm:h-14 md:h-16 w-auto object-contain mix-blend-multiply transition-all duration-300 drop-shadow-[0_8px_20px_rgba(0,0,0,0.45)]"
+              loading="eager"
+              draggable={false}
             />
           </div>
 
