@@ -40,16 +40,25 @@ const Navigation = () => {
             />
           </div>
 
-          {/* Book Discovery Call Button */}
-          <div className="flex items-center">
+          {/* Navigation Links and Button */}
+          <div className="flex items-center space-x-3 sm:space-x-6">
+            <div className="flex items-center space-x-3 sm:space-x-6">
+              <a href="#" className="font-manrope text-[12px] sm:text-[14px] text-white hover:text-[#8f94ff] transition-colors">
+                AI Solutions
+              </a>
+              <a href="#" className="font-manrope text-[12px] sm:text-[14px] text-white hover:text-[#8f94ff] transition-colors">
+                Digital Solutions
+              </a>
+            </div>
+            
             <a
               href="https://cal.com/prajwol-subedi-sztcmv/30min?overlayCalendar=true"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-semibold transition-all duration-300 bg-white text-black hover:bg-gray-100 shadow-lg font-title text-xs sm:text-sm hover:shadow-[0_0_20px_rgba(143,148,255,0.3)]"
+              className="group flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-semibold transition-all duration-300 bg-white text-black hover:bg-gray-100 shadow-lg font-title text-[11px] sm:text-[13px] hover:shadow-[0_0_20px_rgba(143,148,255,0.3)]"
             >
-              <span className="mr-1.5 sm:mr-2">Book Discovery Call</span>
-              <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 transition-all duration-300 text-black group-hover:translate-x-1 group-hover:-translate-y-1" />
+              <span className="mr-1 sm:mr-1.5">Book Call</span>
+              <ExternalLink className="w-3 h-3 transition-all duration-300 text-black group-hover:translate-x-1 group-hover:-translate-y-1" />
             </a>
           </div>
         </div>
