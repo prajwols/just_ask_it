@@ -6,7 +6,7 @@ const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
   const staticText = "Transform Your Business with ";
-  const animatedText = "AI, Software, and Websites That Work";
+  const animatedText = "AI Integrated Digital Solutions";
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -54,13 +54,13 @@ const Hero = () => {
 
       {/* Main Content */}
       <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
-        <div className="mb-6 md:mb-8">
-          <div className="inline-flex items-center px-3 py-1.5 md:px-4 md:py-2 rounded-full modern-gradient-card mb-4 md:mb-6">
-            <Sparkles className="w-3 h-3 md:w-4 md:h-4 mr-1.5 md:mr-2 text-[#8F94FF]" />
-            <span className="text-xs md:text-sm text-white font-content">
+        <div className="mb-12 md:mb-24">
+          {/* <div className="inline-flex items-center px-3 py-1.5 md:px-4 md:py-2 rounded-full modern-gradient-card mb-4 md:mb-6"> */}
+            {/* <Sparkles className="w-3 h-3 md:w-4 md:h-4 mr-1.5 md:mr-2 text-[#8F94FF]" /> */}
+            {/* <span className="text-xs md:text-sm text-white font-content">
               Next-Generation AI Solutions
-            </span>
-          </div>
+            </span> */}
+          {/* </div> */}
         </div>
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 leading-tight font-title">
